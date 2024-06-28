@@ -1,0 +1,273 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecaDash</title>
+    <link rel="icon" href="{% static 'assets/images/logo/logo1.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</head>
+<body>
+    <div class="navibar">
+        <div class="logo">
+            <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+        </div>
+        <div class="icons">
+            <a href="customer/cart_page.html"><img src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
+            <a href="login.html"><img src="{% static 'assets/images/icons/profile.png' %}" alt="Profile"></a>
+        </div>
+        <div class="menu-container">
+          <div class="menu-toggle" onclick="toggleMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <div class="menu-content">
+            <div class="menu-toggle" onclick="toggleMenu()">
+              </div>
+              <div class="close-menu" onclick="toggleMenu()">&#x2715;</div> <!-- Close button -->
+              <div class="logo">
+                  <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+              </div>
+              <hr class="logo-line">
+              <ul>
+                  <li><a href="">Account</a></li>
+                  <li><a href="">Cart</a></li>
+                  <div class="dropdown">
+                  <li><a href="">Categories</a>
+                    <ul class="categories-sub">
+                        <li><a href="">Desserts</a></li>
+                        <li><a href="">Dishes</a></li>
+                        <li><a href="">Pastries</a></li>
+                        <li><a href="">Raw Products</a></li>
+                        <li><a href="">Vegetables And Fruits</a></li>
+                        <li><a href="">Snacks</a></li>
+                    </ul>
+                    </li>
+                    <hr>
+                  <li><a href="">Support</a></li>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Be a Seller</a></li>
+              </ul>
+          </div>
+      </div>
+    </div>
+
+  <div class="greetings">
+    <hr>
+    <h1>Hello there!</h1> 
+    <h2>What are you having today?</h2>
+    <br>
+    <p>There's always something for you.</p> 
+</div>
+
+<div class="categories-container">
+    <a href="categories/dishes_page.html" class="category">
+        <img src="{% static 'assets/images/categories/dish.png' %}" alt="Dishes">
+        <div class="overlay">
+            <h3>Dishes</h3>
+        </div>
+        <div class="title">
+            <h4>Dishes</h4>
+        </div>
+    </a>
+    <a href="#" class="category">
+        <img src="{% static 'assets/images/categories/Dessert.png' %}" alt="Desserts">
+        <div class="overlay">
+            <h3>Desserts</h3>
+        </div>
+        <div class="title">
+            <h4>Desserts</h4>
+        </div>
+    </a>
+    <a href="#" class="category">
+        <img src="{% static 'assets/images/categories/RawProduct.png' %}" alt="Raw Products">
+        <div class="overlay">
+            <h3>Raw Products</h3>
+        </div>
+        <div class="title">
+            <h4>Raw Products</h4>
+        </div>
+    </a>
+    <a href="#" class="category">
+        <img src="{% static 'assets/images/categories/Bread.png' %}" alt="Bread and Pastries">
+        <div class="overlay">
+            <h3>Bread and Pastries</h3>
+        </div>
+        <div class="title">
+            <h4>Bread and Pastries</h4>
+        </div>
+    </a>
+    <a href="#" class="category">
+        <img src="{% static 'assets/images/categories/Vegetable.png' %}" alt="Vegetables and Fruits">
+        <div class="overlay">
+            <h3>Vegetables and Fruits</h3>
+        </div>
+        <div class="title">
+            <h4>Vegetables and Fruits</h4>
+        </div>
+    </a>
+    <a href="#" class="category">
+        <img src="{% static 'assets/images/categories/Snacks.png' %}" alt="Snacks">
+        <div class="overlay">
+            <h3>Snacks</h3>
+        </div>
+        <div class="title">
+            <h4>Snacks</h4>
+        </div>
+    </a>
+    <a href="#" class="category">
+        <img src="{% static 'assets/images/categories/FastFood.png' %}" alt="Fast Food">
+        <div class="overlay">
+            <h3>Fast Food</h3>
+        </div>
+        <div class="title">
+            <h4>Fast Food</h4>
+        </div>
+    </a>
+    <a href="#" class="category">
+        <img src="{% static 'assets/images/categories/StreetFood.png' %}" alt="Street Foods">
+        <div class="overlay">
+            <h3>Street Foods</h3>
+        </div>
+        <div class="title">
+            <h4>Street Foods</h4>
+        </div>
+    </a>
+</div>
+
+<hr>
+<div class="greetings">
+  <h1>Featured Shops</h1>
+  <p>Never miss out anything!</p> <br><br>
+  <hr>
+  </div>
+  <div class="Featured-shops">
+    <div class="shop-card">
+        <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 1" class="shop-image">
+        <div class="shop-info">
+            <div class="shop-name">Shop 1</div>
+            <div class="rating">★ 5.0</div>
+            <div class="address">123 Main Street, Anytown, USA</div>
+        </div>
+    </div>
+    <div class="shop-card">
+        <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+        <div class="shop-info">
+            <div class="shop-name">Shop 2</div>
+            <div class="rating">★ 4.5</div>
+            <div class="address">456 Oak Avenue, Somewhereville, USA</div>
+        </div>
+    </div>
+    <div class="shop-card">
+        <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+        <div class="shop-info">
+            <div class="shop-name">Shop 2</div>
+            <div class="rating">★ 4.8</div>
+            <div class="address">789 Maple Street, Anytown, USA</div>
+        </div>
+    </div>
+    <div class="shop-card">
+        <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+        <div class="shop-info">
+            <div class="shop-name">Shop 2</div>
+            <div class="rating">★ 4.7</div>
+            <div class="address">101 Pine Road, Somewhereville, USA</div>
+        </div>
+    </div>
+    <div class="shop-card">
+        <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+        <div class="shop-info">
+            <div class="shop-name">Shop 2</div>
+            <div class="rating">★ 4.2</div>
+            <div class="address">202 Elm Street, Anytown, USA</div>
+        </div>
+    </div>
+    <div class="shop-card">
+        <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+        <div class="shop-info">
+            <div class="shop-name">Shop 2</div>
+            <div class="rating">★ 4.9</div>
+            <div class="address">303 Oak Lane, Somewhereville, USA</div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="greetings">
+    <h1>Deals just for you</h1>
+    <p>Products tailored for you.</p> <br><br>
+    <hr>
+</div>
+
+
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <div class="logo">
+                      <img src="{% static 'assets/images/logo/Logo3.png' %}" alt="DecaDash">
+                  </div>
+                  <ul class="contact-info">
+                      <li><a href="#">DecaDash Community Angeles City Pampanga</a></li>
+                      <li><a href="mailto:hexashop@company.com">xxxDecadash.com</a></li>
+                      <li><a href="tel:09XXXXXXXX">09X-XXX-XXXX</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Categories</h4>
+                  <ul class="footer-links">
+                    <li><a href="">Desserts</a></li>
+                    <li><a href="">Dishes</a></li>
+                    <li><a href="">Pastries</a></li>
+                    <li><a href="">Raw Products</a></li>
+                    <li><a href="">Vegetables And Fruits</a></li>
+                    <li><a href="">Snacks</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Useful Links</h4>
+                  <ul class="footer-links">
+                      <li><a href="#">Homepage</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Help & Information</h4>
+                  <ul class="footer-links">
+                      <li><a href="#">lorem ipsum</a></li>
+                      <li><a href="#">lorem ipsum</a></li>
+                      <li><a href="#">lorem ipsum</a></li>
+                      <li><a href="#">lorem ipsum</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="under-footer">
+                <p>decadash.ltd © all rights reserved ® 2024</p>
+                  <ul class="social-links">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+    
+</body>
+</html>
