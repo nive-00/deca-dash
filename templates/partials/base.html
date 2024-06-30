@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecaDash</title>
+    <link rel="icon" href="{% static 'assets/images/logo/logo1.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</head>
+<body>
+    <div class="navibar">
+        <div class="logo">
+            <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+        </div>
+        <div class="icons">
+            <a href="customer/cart_page.html"><img src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
+            <a href="login.html"><img src="{% static 'assets/images/icons/profile.png' %}" alt="Profile"></a>
+        </div>
+        <div class="menu-container">
+          <div class="menu-toggle" onclick="toggleMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <div class="menu-content">
+            <div class="menu-toggle" onclick="toggleMenu()">
+              </div>
+              <div class="close-menu" onclick="toggleMenu()">&#x2715;</div> <!-- Close button -->
+              <div class="logo">
+                  <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+              </div>
+              <hr class="logo-line">
+              <ul>
+                  <li><a href="">Account</a></li>
+                  <li><a href="">Cart</a></li>
+                  <div class="dropdown">
+                  <li><a href="">Categories</a>
+                    <ul class="categories-sub">
+                        <li><a href="">Desserts</a></li>
+                        <li><a href="">Dishes</a></li>
+                        <li><a href="">Pastries</a></li>
+                        <li><a href="">Raw Products</a></li>
+                        <li><a href="">Vegetables And Fruits</a></li>
+                        <li><a href="">Snacks</a></li>
+                    </ul>
+                    </li>
+                    <hr>
+                  <li><a href="">Support</a></li>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Be a Seller</a></li>
+              </ul>
+          </div>
+      </div>
+    </div>
+
+    {% block content %}
+
+    {% endblock content %}
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-item">
+                        <div class="logo">
+                            <img src="{% static 'assets/images/logo/Logo3.png' %}" alt="DecaDash">
+                        </div>
+                        <ul class="contact-info">
+                            <li><a href="#">DecaDash Community Angeles City Pampanga</a></li>
+                            <li><a href="mailto:hexashop@company.com">xxxDecadash.com</a></li>
+                            <li><a href="tel:09XXXXXXXX">09X-XXX-XXXX</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-item">
+                        <h4>Categories</h4>
+                        <ul class="footer-links">
+                          <li><a href="">Desserts</a></li>
+                          <li><a href="">Dishes</a></li>
+                          <li><a href="">Pastries</a></li>
+                          <li><a href="">Raw Products</a></li>
+                          <li><a href="">Vegetables And Fruits</a></li>
+                          <li><a href="">Snacks</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-item">
+                        <h4>Useful Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Homepage</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-item">
+                        <h4>Help & Information</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">lorem ipsum</a></li>
+                            <li><a href="#">lorem ipsum</a></li>
+                            <li><a href="#">lorem ipsum</a></li>
+                            <li><a href="#">lorem ipsum</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                      <p>decadash.ltd © all rights reserved ® 2024</p>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
