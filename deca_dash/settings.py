@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     #custom apps
     'core',
+    'userauths',
 ]
 
 MIDDLEWARE = [
@@ -138,7 +139,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 JAZZMIN_SETTINGS = {
     'site_header':'DecaDash',
     'site_brand':'DecaDash',
-    'site_logo':'assets/images/logo/Logo1.png',
+    # 'site_logo':'assets/images/logo/Logo1.png',   
     'copyright':"DecaDash.com",
 }
     
+AUTH_USER_MODEL = 'userauths.User'
