@@ -1,0 +1,157 @@
+
+/*LOGIN PAGE*/
+.logregContainer {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #4e4e4e23;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 70px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .logregContainer:hover{
+    box-shadow: 10px 10px #4e4e4e42;
+  }
+  .checkbox-container {
+    padding-top: 15%;
+  }
+  
+  .remember-me {
+    padding-top: 12px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    margin-left: 6px;
+    margin-top: 10px;
+    color: #3b3b3bce;
+  }
+  .currentEmail{
+    color: #0b484e;
+    text-decoration: underline;
+  }
+
+  .matched {
+    color: green;
+    margin-top: -12px;
+    margin-bottom: 12px;
+  }
+  .not-matched {
+      color: red;
+      margin-top: -12px;
+      margin-bottom: 12px;
+  }
+  .invalid-password {
+    margin-top: -12px;
+    margin-bottom: 12px;
+      color: orange;
+  }
+
+.createpass {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.createpass input[type="password"] {
+  padding-right: 30px; 
+}
+
+.createpass img.toggle-password {
+  position: absolute;
+  top: 40%; 
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  opacity: 0.7;
+}
+
+
+
+  /*REGISTER PAGE*/
+  input[type="file"],
+  input[type="date"],
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="url"] 
+ 
+  {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #258588b6;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  .register-container h1{
+    margin-bottom: 5px;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(248, 145, 28);
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .password-checker {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .agree-terms {
+    padding-top: 25px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    margin-left: 6px;
+    margin-top: 1px;
+    color: #3b3b3bce;
+  }
+  
+  .termsandcond{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    margin-left: 6px;
+    color: #3b3b3bce;
+  }
+  
+  .g-recaptcha{
+    margin-top: -40px;
+    padding: 25px;
+  }
+  
+  /*FinalRegister Page*/
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #258588b6;
+    border-radius: 12px;
+    margin: 0 0 5px 5px;
+  }
+  .form-group-categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+.column {
+    flex: 50%;
+}
+.column label {
+    display: block;
+    margin-bottom: 5px; /* Optional: Adjust spacing between checkboxes */
+}
+label{
+  color: #525252;
+}

@@ -1,0 +1,488 @@
+.storeTitle{
+    margin: 0 40px;
+}
+.storeTitle h4{
+    font-size: 16px;
+}
+.storeTitle h3{
+    font-size: 24px;
+}
+.storeTitle span{
+    font-size: 17px;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    width: 280px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 12px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    margin: 12px;
+}
+
+.card h2 {
+    margin:0 ;
+    font-size: 17px;
+}
+
+.card .card-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-left: 10px;
+    margin-right: 12px;
+    filter: invert();
+}
+
+.card.sales-card {
+    background-color: rgb(75, 187, 75);
+}
+
+.card.orders-card {
+    background-color: rgb(248, 145, 28);
+}
+
+.card.reviews-card {
+    background-color: #126E79;
+}
+
+.card.products-card {
+    background-color: #424242; /* Light orange */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.containerProductOrders {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.card-orders {
+    width: 55%;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin: 30px;
+}
+
+.card-orders:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+
+.card-ordersprod {
+    width: 35%;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin: 30px;
+}
+
+.card-ordersprod:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+.ordersprod-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ordersprod-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.ordersprod-header h2{
+    font-size: 24px;
+}
+
+.ordersprod-header img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.orders-summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.order-status h3 {
+    font-size: 15px;
+    margin: 0;
+}
+.order-status h2 {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0;
+}
+.count {
+    font-weight: bold;
+    font-size: 18px;
+}
+.pending {
+    background-color: #fff3e0;
+    color: #ff9800;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pending:hover {
+    background-color: #ffe0b2;
+    color: #e65100;
+}
+
+.processing {
+    background-color: #e3f2fd;
+    color: #2196f3; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.processing:hover {
+    background-color: #bbdefb;
+    color: #0d47a1;
+}
+
+.completed {
+    background-color: #e8f5e9; 
+    color: #4caf50; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.completed:hover {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.total {
+    color: gray;
+    transition: color 0.3s;
+}
+
+.total:hover {
+    color: darkgray;
+}
+
+.chartOrders{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+#orders-chart {
+    width: 100%; /* Make the canvas take full width inside its container */
+    height: auto;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+
+.recent-orders-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    max-height: 300px; /* Limit height to make it scrollable */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.recent-orders-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-orders-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.recent-orders-list li:last-child {
+    border-bottom: none; /* Remove bottom border for last item */
+}
+
+.order-id {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.order-name {
+    margin-right: 10px;
+}
+
+.customer-name {
+    margin-right: 10px;
+    color: #666;
+}
+
+.transaction-status {
+    margin-right: 10px;
+}
+
+.order-date {
+    color: #999;
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.divider {
+    margin: 20px 0; /* Adjust margin as needed */
+    border-top: 1px solid #ccc; /* Color and style of the divider */
+}
+
+.manage-button {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 13px;
+    color: #414141;
+    background-color: #928e8e;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.manage-orders {
+    background-color: #bdbdbd;
+}
+
+.manage-products {
+    background-color: #bdbdbd;
+}
+
+.manage-button:hover {
+    background-color: #7a7a7a; /* Darker gray on hover */
+    color: #fff; /* White text on hover */
+}
+
+.products-status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+
+.products-status h3 {
+    font-size: 15px;
+    margin: 0;
+}
+.products-status h2 {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.in-stock {
+    background-color: #e8f5e9; 
+    color: #2e7d32; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.in-stock:hover {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+}
+
+.out-of-stock {
+    background-color: #ffebee; 
+    color: #c62828;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.out-of-stock:hover {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+}
+
+.live-products {
+    background-color: #e3f2fd; 
+    color: #1565c0; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.live-products:hover {
+    background-color: #bbdefb;
+    color: #0d47a1;
+}
+
+.low-stock {
+    background-color: #fff3e0; 
+    color: #e65100; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.low-stock:hover {
+    background-color: #ffe0b2;
+    color: #bf360c;
+}
+
+.inventory-value {
+    background-color: #fffde7; 
+    color: #f57f17; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.inventory-value:hover {
+    background-color: #fff9c4;
+    color: #ef6c00;
+}
+
+.monthlySales {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+.monthlySales:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+.monthlySales-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.monthlySales-header img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.monthlySales-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 12px;
+
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin-left: 270px;
+        margin-right: 12px;
+        margin-top:-60px;
+        margin-bottom:20px;
+        filter: invert();
+    }
+    
+
+    .card-orders, .card-ordersprod {
+        width: 100%;
+        margin: 15px 0;
+        flex-direction: column;
+        padding: 10px;
+        margin: 5px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-left: 0;
+        margin-right: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+        filter: invert;
+    }
+
+    .card-orders, .card-ordersprod {
+        width: 48%;
+        margin: 10px 1%;
+        flex-direction: row;
+        padding: 15px;
+    }
+}

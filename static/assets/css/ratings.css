@@ -1,0 +1,22 @@
+
+.stars {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    color: #929292;
+  }
+  
+  .stars::before {
+    content: "\2605\2605\2605\2605\2605";
+    color: gold; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: calc(4.7 * 20px); 
+  }
+  
+  .shop-ratings {
+    font-size: 16px; 
+    margin-bottom: 10px; 
+  }

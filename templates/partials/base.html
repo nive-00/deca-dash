@@ -7,16 +7,19 @@
     <title>DecaDash</title>
     <link rel="icon" href="{% static 'assets/images/logo/logo1.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/shop.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/category.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="{% static 'assets/js/script.js' %}"></script>
 </head>
 <body>
+    
     <div class="navibar">
         <div class="logo">
             <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
         </div>
         <div class="icons">
-            <a href="customer/cart_page.html"><img src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
+            <a href="customer/cart_page.html"><img class='cart-icon' src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
             <a href="login.html"><img src="{% static 'assets/images/icons/profile.png' %}" alt="Profile"></a>
         </div>
         <div class="menu-container">

@@ -3,6 +3,11 @@ function toggleMenu() {
   var menuContent = document.querySelector('.menu-content');
   var cartActions = document.getElementById('cartActions');
 
+  // Initialize the left property if not already set
+  if (!menuContent.style.left) {
+    menuContent.style.left = '-250px';
+  }
+
   if (menuContent.style.left === '-250px') {
     menuContent.style.left = '0';
     cartActions.style.zIndex = '1';
@@ -78,6 +83,9 @@ document.getElementById('change-link').addEventListener('click', function(e) {
     confirmNewPhoneInput.style.display = 'none'; 
   }
 });
+
+
+//input-limits
 
 //quantity-picker
  

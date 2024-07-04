@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecaDash</title>
+    <link rel="icon" href="{% static 'assets/images/logo/logo1.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="{% static 'assets/js/script.js' %}"></script>
+    <script src="{% static 'assets/js/password.js' %}"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script></head>
+<body>
+    <div class="navibar">
+        <div class="logo">
+            <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+        </div>
+        <div class="icons">
+                        <a href="customer/cart_page.html"><img class="cart-icon" src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
+
+            <a href="#"><img src="{% static 'assets/images/icons/profile.png' %}" alt="Profile"></a>
+        </div>
+        <div class="menu-container">
+          <div class="menu-toggle" onclick="toggleMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <div class="menu-content">
+            <div class="menu-toggle" onclick="toggleMenu()">
+              </div>
+              <div class="close-menu" onclick="toggleMenu()">&#x2715;</div> <!-- Close button -->
+              <div class="logo">
+                  <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+              </div>
+              <hr class="logo-line">
+              <ul>
+                  <li><a href="">Account</a></li>
+                  <li><a href="">Cart</a></li>
+                  <div class="dropdown">
+                  <li><a href="">Categories</a>
+                    <ul class="categories-sub">
+                        <li><a href="">Desserts</a></li>
+                        <li><a href="">Dishes</a></li>
+                        <li><a href="">Pastries</a></li>
+                        <li><a href="">Raw Products</a></li>
+                        <li><a href="">Vegetables And Fruits</a></li>
+                        <li><a href="">Snacks</a></li>
+                    </ul>
+                    </li>
+                    <hr>
+                  <li><a href="">Support</a></li>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Be a Seller</a></li>
+              </ul>
+          </div>
+      </div>
+    </div>
+    <hr>  
+<div class="greetings">
+<hr>
+  <h1>Welcome to DecaDash</h1>
+  <p>Start growing your business with us today. </p> <br><br>
+  </div>
+
+<div class="logregContainer">
+    <h3 style="color: gray;">Seller Details</h3>
+    <form action="otp-verification.html" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+      <!-- <label for="firstname"></label>
+      <input type="text" id="firstname" name="firstname" placeholder="First Name" required >
+  
+      <label for="lastname"></label>
+      <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+  
+      <label for="email"></label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+  
+      <label for="phone"></label>
+      <input type="tel" id="phone" name="phone" pattern="^\09\d{9}$" placeholder="Phone Number" required>  
+      <hr>
+      <h3 style="color: gray;">Create a password</h3>
+
+        <div class="createpass">
+            <div style="position: relative;">
+            <input type="password" id="createPassword" name="createpassword" placeholder="Create a password" oninput="validatePassword(); checkPasswordMatch()">
+            <img src="{% static './assets/images/icons/view.png' %}" class="toggle-password" id="toggleCreatePassword" onclick="togglePasswordVisibility('createPassword', 'toggleCreatePassword');" alt="Toggle password visibility">
+        </div>
+        <div id="passwordStrengthMessage" class="form-group"></div>
+        
+        <div style="position: relative;">
+          <input type="password" id="confirmPassword" name="confirmpassword" placeholder="Confirm your password"  oninput="checkPasswordMatch()">
+          <img src="{% static './assets/images/icons/view.png' %}" class="toggle-password" id="toggleConfirmPassword" onclick="togglePasswordVisibility('confirmPassword', 'toggleConfirmPassword');" alt="Toggle password visibility">
+        </div>
+        <div id="passwordMatchMessage" class="form-group"></div>
+      </div>
+
+     -->
+
+        <div class="termsandcond">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="terms.html" target="_blank">terms and conditions</a>.</label><br><br>
+        </div>
+      <div class="g-recaptcha" data-sitekey="6LfbPMopAAAAAPw1VGzQBqpKKvxXej97EY96km43"></div>
+    <!--h-ref is sample only here--><a href="otp-verification.html">
+    <input type="submit" value="Register" onclick="onSubmit(event)">
+    </form>
+    <p>Already have an account? <a href="login.html">Please login to continue.</a></p>
+</div>
+
+
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <div class="logo">
+                      <img src="{% static 'assets/images/logo/Logo3.png' %}" alt="DecaDash">
+                  </div>
+                  <ul class="contact-info">
+                      <li><a href="#">DecaDash Community Angeles City Pampanga</a></li>
+                      <li><a href="mailto:hexashop@company.com">xxxDecadash.com</a></li>
+                      <li><a href="tel:09XXXXXXXX">09X-XXX-XXXX</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Categories</h4>
+                  <ul class="footer-links">
+                    <li><a href="">Desserts</a></li>
+                    <li><a href="">Dishes</a></li>
+                    <li><a href="">Pastries</a></li>
+                    <li><a href="">Raw Products</a></li>
+                    <li><a href="">Vegetables And Fruits</a></li>
+                    <li><a href="">Snacks</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Useful Links</h4>
+                  <ul class="footer-links">
+                      <li><a href="#">Homepage</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Help & Information</h4>
+                  <ul class="footer-links">
+                      <li><a href="#">lorem ipsum</a></li>
+                      <li><a href="#">lorem ipsum</a></li>
+                      <li><a href="#">lorem ipsum</a></li>
+                      <li><a href="#">lorem ipsum</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="under-footer">
+                <p>decadash.ltd © all rights reserved ® 2024</p>
+                  <ul class="social-links">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+</body>
+</html>

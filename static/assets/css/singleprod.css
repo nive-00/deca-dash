@@ -1,0 +1,514 @@
+
+
+/*SINGLE PAGE PRODUCT*/
+/* Product page container */
+.carousel {
+  width: 85%;
+  height: auto; 
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  overflow: hidden; /* Ensures images don't overflow */
+}
+
+.carousel-inner {
+  display: flex;
+  overflow-x: auto; /* Allows scrolling if images exceed container width */
+}
+
+.carousel-inner > .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px; 
+  flex-shrink: 0;
+  margin: auto;
+}
+
+.carousel-inner > .item > img {
+  max-width: 100%;
+  max-height: 100%; 
+  object-fit: contain;
+  vertical-align: middle; 
+  margin: auto; 
+}
+
+
+.product-page-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: -28px;
+  }
+  .shop_name {
+    display: flex;
+    align-items: center; 
+    margin-bottom: -50px;
+  }
+  
+  .back_btn {
+    background-image: url(../assets/images/icons/back.png);
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top:-12px;
+    margin-left: 10px;
+    opacity: 70%;
+    margin-right: 12px
+    ;
+  }
+  
+  .shop-name a {
+    margin-left: 10px; /* Adjust margin as needed */
+  }
+  
+  /* Product details container */
+  .product-details-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .product-name-container {
+    text-align: left;
+  }
+  
+  .rating-container {
+    margin-right: 10px;
+  }
+  
+  .stock-container {
+    margin-top: 5px;
+  }
+  
+  /*Shelf-life*/
+  .shelf-life{
+    margin-top: 24px;
+  }
+  .shelf-life h4{
+    color: #126E79;
+  }
+  .shelf-life span{
+    color: #45a049;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .storage-instructions{
+    display: flex;
+    gap: 10px;
+  }
+  
+  .msg-seller-prd {
+    background-color: #126E79;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+  }
+  
+  .msg-seller-prd:hover {
+    background-color: #0b484e;
+    transition: all 0.3s ease;
+  }
+  
+  
+  /* Sentiment analysis container */
+  .sentimentsumCont {
+    display: flex;
+    align-items: center;
+    margin: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .sentiment-piechart, .sentimentSum, .sentimentGraph {
+    padding: 12px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease; /* Adds smooth transition for hover effects */
+  }
+  
+  .sentiment-piechart {
+    flex: 0 0 auto; /* Prevents it from growing or shrinking */
+  }
+  
+  .sentiment-piechart img {
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+  }
+  
+  .sentimentSum {
+    flex: 1; /* Allows this element to take up the remaining space */
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px; /* Adds rounded corners to the border */
+  }
+  .sentimentSum h4{
+    color: #18c443;
+    font-weight: 200;
+  }
+  .sentimentSum span{
+    color: #18c443;
+    font-weight: 200;
+  }
+.sentimentSum p{
+  font-style: italic;
+  font-size: medium;
+  color: #525252;
+}
+  .sentimentGraph {
+    flex: 0 0 auto; /* Prevents it from growing or shrinking */
+
+  }
+  
+  .sentimentGraph img {
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Hover Effects */
+
+  .sentimentSum:hover {
+    background-color: #f0f8ff; /* Changes background color on hover */
+    border-color: #00ff4c; /* Changes border color on hover */
+    transform: scale(1.15); 
+  }
+  
+  .sentiment-analysis-container {
+    align-items: center;
+ 
+  }
+
+  .sentiment-analysis-container:hover{
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+  }
+  .sentiment-analysis-container:not(:hover) {
+    transition: all 0.3s ease;
+}
+
+  .sentiment-analysis-container, h3 p{
+    text-align: center;
+  }
+  .sentimentImg{
+    margin-left: 50px;
+    max-width: 75%;
+  }
+  
+  .overall-sentiment {
+    margin-top: 10px;
+    font-weight: bold; 
+    font-size: 16px;
+  }
+  
+  .overall-sentiment span {
+    color: #28a745;
+  }
+  
+  .tags-container {
+    display: flex;
+    justify-content: center; 
+    margin: 10px;
+    color: #525252;
+  }
+  
+  .tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    margin: 12px;
+  }
+  .tag:hover{
+    background-color: #8f8f8f8e;
+    transition: all 0.3s ease;
+  }
+  
+  
+  /* Review system container */
+  .review-system-container {
+    margin-bottom: 20px;
+    margin: 40px;
+  }
+  .review-system-container h3{
+    text-align: center;  
+  }
+  .timestamp{
+    margin-left: 28px;
+    font-size: 13px;
+    color: #8a8a8a;
+  }
+  .filter-buttons {
+    display: flex;
+    justify-content: center; 
+    margin: 30px;
+    color: #525252;
+  }
+  
+  .filter-btn {
+    padding: 5px 12px;
+    background-color: #126E79;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    line-height: 1;
+    margin: 0 5px; /* Adjust margin to create a small gap between buttons */
+  }
+  
+  
+  .filter-btn:hover,
+  .filter-btn:focus {
+    background-color: #ff8800;
+    transition: all 0.3s ease;
+  }
+  
+
+  .review {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .user-info {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align the name and review text to the top of the container */
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .rating {
+    color: #ffc107;
+  }
+  
+  .review-text {
+    margin-top: -15px; 
+    margin-left: 30px;
+  }
+  
+  .user-review-images-container {
+    overflow-x: auto; 
+    white-space: nowrap; 
+    margin-left: 60px;
+  }
+  
+  .user-review-images {
+    display: flex;
+  }
+  
+  .user-review-images img {
+    max-width: 250px;
+    height: 100px;
+    margin-right: 10px;
+    object-fit: cover; 
+  }
+  
+  .reviews-list:hover{
+    background-color: #b8b8b849;
+    border-radius: 24px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    padding: 9px;
+  }
+  .reviews-list:not(:hover) {
+    transition: all 0.3s ease;
+}
+
+  .reviewContainer{
+    background-color: #e7e7e77c;
+    padding: 12px;
+  }
+
+.review-icon{
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.6; /* 70% opacity */
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Chat Popup */
+.chat-popup {
+  display: none; /* Hide by default */
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  max-height: 500px; /* Increased height */
+  overflow: auto; /* Enable scrolling */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+
+.status {
+  display: flex;
+  align-items: center; 
+  margin-left: 35px;
+  margin-top: -12px;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* Makes it round */
+  background-color: #4CAF50; /* Green color for active status */
+  margin-right: 5px; /* Space between indicator and text */
+}
+
+.status-text {
+  font-size: 14px;
+  color: #555; /* Color for status text */
+}
+/* Additional styles for shop info */
+.shop-info {
+  display: flex;
+  align-items: center;
+}
+
+.shop-image {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  margin-right: 10px; 
+  object-fit: cover; 
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #777;
+}
+
+
+
+.chat-popup.show {
+  display: block; /* Show when toggled */
+}
+.chat-popup-content {
+  padding: 15px;
+  height: 100%; /* Ensure content fills the popup */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Header */
+.chat-header {
+  flex-shrink: 0; /* Prevent header from growing */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Example border for separation */
+}
+
+.chat-header .shop-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.shop-name {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+/* Chat Messages */
+.chat-messages {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.shop-message {
+  background-color: #1a6970;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 12px;
+  display: inline-block; /* Display as inline-block */
+  white-space: break-spaces; /* Allow text to wrap */
+}
+
+
+.chat-messages-content{
+  flex-grow: 1; /* Allow messages to grow and fill remaining space */
+  max-height: calc(100% - 100px); /* Adjust as needed to fit header and input */
+  overflow-y: auto;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Chat Input Container */
+.chat-input-container {
+  flex-shrink: 0; 
+  display: flex;
+  align-items: center;
+  padding-top: 10px; 
+}
+
+#chat-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin-right: 10px;
+}
+
+.button-send {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: -12px;
+}
+
+.button-send:hover {
+  background-color: #0056b3;
+}

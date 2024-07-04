@@ -1,0 +1,95 @@
+
+/*Dashboard_Customer_page*/
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex; 
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  
+  .tab::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  .tab::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .tab::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px; 
+    border: 2px solid #f1f1f1; 
+  }
+  
+  .tab::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Change color on hover */
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    border-radius: 5px 5px 0 0;
+    flex: 1; 
+  }
+  .category-slider,
+  .tab button.active {
+    background-color: #ccc;
+  }
+  .category-slider,
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  .category-slider,
+  .tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+  }
+  .category-slider,
+  .tabcontent.active {
+    display: block;
+  }
+  .category-slider,
+  .tab button {
+    min-width: 120px;
+  }
+  
+
+
+  .transaction-status{
+    margin: 12px;
+  }
+  .transaction-status span{
+    color: rgb(17, 151, 17);
+    font-size: 18px;
+  
+  }
+  .transaction-status h4 {
+      margin-bottom: 10px;
+  }
+  
+  .transaction-status h4 span {
+    color: rgb(0, 165, 0);
+  }
+  
+  .transaction-status p {
+      margin-bottom: 10px;
+      color: white;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 10px;
+  }
+  
+  .transaction-status p span {
+      color: rgb(0, 209, 0);
+  }

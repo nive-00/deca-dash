@@ -1,0 +1,161 @@
+
+/*Checkout page*/
+.checkout-container{
+    margin: 20px;
+  }
+  
+  .customer-profile-ckp {
+    margin-bottom: 20px;
+    border-bottom: 2px dashed #126E79;
+    padding-bottom: 20px;
+    padding: 12px
+  ;
+  }
+  .customer-profile-ckp:hover {
+    background-color: #dbdbdb3f;
+  }
+  .customer-profile-ckp h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .customer-profile-ckp p {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .checkout-item{
+    background-color: #2ccee010;
+  }
+  .checkout-item:hover{
+    background-color: #ff880023;
+  }
+  
+  /* Style for the note section */
+  .note-section {
+    margin-top: 7px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    max-width: 500px; 
+  }
+  
+  /* Style the link */
+  #showNote {
+    display: block;
+    color: #3659b9; 
+    font-weight: bold; 
+  }
+  
+  #noteContent {
+    display: none; 
+  }
+  
+  #noteContent p {
+    margin: 5px 0; 
+    color: #126E79;
+  }
+  .payment-details{
+    padding: 12px;
+  }
+  .payment-details:hover{
+    background-color: #e2e2e2;
+  }
+  .payment-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .payment-option h4 {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  
+  .payment-option select {
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  
+  .order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .order-total h4 {
+    margin: 0;
+    text-align: left;
+    margin-left: 10px;
+  }
+  
+  .order-total span {
+    margin-right: 10px;
+    text-align: left;
+    color: #228d3b;
+    font-size: 18px;
+  }
+  
+  /*Order Total Page*/
+  .order-details-cont{
+    margin: 12px;
+  }
+  .customer-profile-odp {
+    border-bottom: 1px solid #979797;
+    padding: 12px;
+  }
+  .customer-profile-odp:hover{
+    background-color: #e0e0e0;
+  }
+  .contactseller-btn:hover{
+    background-color: #d67200;
+  }
+  .contactseller-btn{
+    color: white;
+  }
+  
+  .order-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .order-info p {
+    margin: 0;
+  }
+  
+  .order-info p span {
+    float: right;
+    margin-bottom: 17px;
+    margin-right: 12px;
+  
+  }
+  .order-info h4 span {
+    float: right;
+    margin-bottom: 12px;
+  }
+  
+  .payment-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .order-info h4 {
+    margin-right: 12px;
+  }
+  
+  .note-section-odp {
+    margin: 12px;
+    margin-top: 7px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    max-width: 500px; 
+  }
