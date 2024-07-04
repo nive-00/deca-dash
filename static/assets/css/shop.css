@@ -178,10 +178,11 @@
   }
   .product-img {
     width:  150px;
-    height: auto; 
+    height: 150px; 
     object-fit: cover; 
     border-radius: 5px;
     margin-right: 20px;
+    margin-left: 10px;
   }
   .stock {
     color: rgba(0, 114, 0, 0.712); /* Green color for in-stock text */

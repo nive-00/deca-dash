@@ -1,0 +1,354 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecaDash</title>
+    <link rel="icon" href="assets/images/logo/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/shop.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/sellermodule/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/sellermodule/navbar.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="{% static 'assets/js/script.js' %}"></script>
+    <script src="{% static 'assets/js/seller-dashboard.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="navibar">
+        <div class="logodb">
+            <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+        </div>
+        <div class="dropdownsMenu">
+            <div class="dropdown">
+                <a href="#orders" class="dropbtn">Orders</a>
+                <div class="dropdown-content">
+                    <a href="#manage-orders">Manage Orders</a>
+                    <a href="#order-history">Order History</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#sales" class="dropbtn">Sales</a>
+                <div class="dropdown-content">
+                    <a href="#track-sales">Track Sales</a>
+                    <a href="#revenue-reports">Revenue Reports</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#inventory" class="dropbtn">Inventory</a>
+                <div class="dropdown-content">
+                    <a href="#manage-products">Manage Products</a>
+                    <a href="#stock-levels">Stock Levels</a>
+                    <a href="#low-stock-alerts">Low Stock Alerts</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#account" class="dropbtn">Account</a>
+                <div class="dropdown-content">
+                    <a href="#profile">Profile</a>
+                    <a href="#notifications">Notifications</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#shop-settings" class="dropbtn">Shop Settings</a>
+                <div class="dropdown-content">
+                    <a href="#shop-details">Shop Details</a>
+                    <a href="#shipping-settings">Shipping Settings</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-container">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="menu-content">
+                <div class="menu-toggle" onclick="toggleMenu()"></div>
+                <div class="close-menu" onclick="toggleMenu()">&#x2715;</div>
+                <div class="logo">
+                    <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+                </div>
+                <hr class="logo-line">
+
+<div class="sidebar">
+    <ul class="menu">
+        <li class="menu-item dropdown">
+            <a href="#orders" class="menu-link dropbtn">Orders</a>
+            <ul class="submenu">
+                <li><a href="#manage-orders">Manage Orders</a></li>
+                <li><a href="#order-history">Order History</a></li>
+                <li><a href="#returns-refunds">Returns & Refunds</a></li>
+                <li><a href="#shipping-labels">Shipping Labels</a></li>
+            </ul>
+        </li>
+        <li class="menu-item dropdown">
+            <a href="#sales" class="menu-link dropbtn">Sales</a>
+            <ul class="submenu">
+                <li><a href="#track-sales">Track Sales</a></li>
+                <li><a href="#revenue-reports">Revenue Reports</a></li>
+                <li><a href="#payouts">Payouts</a></li>
+                <li><a href="#discounts-promotions">Discounts & Promotions</a></li>
+            </ul>
+        </li>
+        <li class="menu-item dropdown">
+            <a href="#inventory" class="menu-link dropbtn">Inventory</a>
+            <ul class="submenu">
+                <li><a href="#manage-products">Manage Products</a></li>
+                <li><a href="#stock-levels">Stock Levels</a></li>
+                <li><a href="#low-stock-alerts">Low Stock Alerts</a></li>
+                <li><a href="#bulk-updates">Bulk Updates</a></li>
+            </ul>
+        </li>
+        <li class="menu-item dropdown">
+            <a href="#account" class="menu-link dropbtn">Account</a>
+            <ul class="submenu">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#payment-settings">Payment Settings</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+            </ul>
+        </li>
+        <li class="menu-item dropdown">
+            <a href="#shop-settings" class="menu-link dropbtn">Shop Settings</a>
+            <ul class="submenu">
+                <li><a href="#shop-details">Shop Details</a></li>
+                <li><a href="#shipping-settings">Shipping Settings</a></li>
+                <li><a href="#tax-settings">Tax Settings</a></li>
+                <li><a href="#custom-pages">Custom Pages</a></li>
+            </ul>
+        </li>
+        <hr>
+        <li class="menu-item"><a href="#support" class="menu-link">Support</a></li>
+        <li class="menu-item"><a href="#about-us" class="menu-link">About Us</a></li>
+        <li class="menu-item"><a href="#be-a-seller" class="menu-link">Be a Seller</a></li>
+    </ul>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+<div class="greetings">
+    <h2>My Dashboard</h2>
+    <p>Manage your business using the DASHBOARD.</p>
+</div><hr>
+<div class="storeTitle">
+<h3><img class="shop-icon"  src="{% static 'assets/images/icons/shop.png' %}" alt="Shop Icon">
+    <a href> Kusing Karinderya</a></h3>
+<span>June 5, 2024 (Friday)</span>
+    </div>    
+<div class="cardsContainer">
+    <div class="card sales-card">
+        <div class="card-content">
+            <span class="card-value">₱2500.00</span>
+            <h2>Sales</h2>
+        </div>
+        <img src="{% static 'assets/images/banners/sales.png' %}" alt="Sales Icon">
+    </div>
+
+    <div class="card orders-card">
+        <div class="card-content">
+            <span class="card-value">35</span>
+            <h2>Orders</h2>
+        </div>
+        <img src="{% static 'assets/images/banners/orders.png' %}" alt="Orders Icon">
+    </div>
+
+    <div class="card reviews-card">
+        <div class="card-content">
+            <span class="card-value">25</span>
+            <h2>Messages</h2>
+        </div>
+        <img src="{% static 'assets/images/banners/reviews.png' %}" alt="Reviews Icon">
+    </div>
+
+    <div class="card products-card">
+        <div class="card-content">
+            <span class="card-value">10</span>
+            <h2>Products</h2>
+        </div>
+        <img src="{% static 'assets/images/banners/products.png' %}" alt="Products Icon">
+    </div>
+</div>
+<hr>
+
+<div class="containerProductOrders">
+    <div class="card-orders">
+        <div class="ordersprod-container">
+            <div class="ordersprod-header">
+                <img src="{% static 'assets/images/banners/orders.png' %}" alt="View Icon">
+                <h2>Orders</h2>
+            </div>
+            <div class="button-container">
+                <a href="#" class="manage-button manage-products">Manage Orders</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <div class="orders-summary">
+                <div class="order-status total">
+                    <h2>Total</h2>
+                    <span class="count" id="total-count">35</span>
+                </div>
+    
+                <div class="order-status pending">
+                    <h3>Pending</h3>
+                    <span class="count" id="pending-count">5</span>
+                </div>
+                
+                <div class="order-status processing">
+                    <h3>Processing</h3>
+                    <span class="count" id="processing-count">10</span>
+                </div>
+                
+                <div class="order-status completed">
+                    <h3>Completed</h3>
+                    <span class="count" id="completed-count">20</span>
+                </div>
+            </div>
+        </div>
+        <div class="chartOrders">
+            <canvas id="orders-chart" width="200" height="200"></canvas>
+        </div>
+        
+        <div class="recent-orders-container">
+            <h3>Recent Orders</h3>
+            <ul id="recent-orders-list" class="recent-orders-list"></ul>
+        </div>
+    </div>
+    
+    
+    
+    
+<!---Products Part-->
+<div class="card-ordersprod">
+    <div class="ordersprod-container">
+        <div class="ordersprod-header">
+            <img src="{% static 'assets/images/banners/products.png' %}" alt="Products Icon">
+            <h2>Products</h2>
+        </div>
+    
+        <div class="button-container">
+            <a href="#" class="manage-button manage-orders">Manage products</a>
+        </div>
+    
+        <hr class="divider">
+    
+        <div class="products-status total">
+            <h2>Total Products</h2>
+            <span class="count" id="product-total-count">23</span>
+        </div>
+    
+        <div class="products-status in-stock">
+            <h3>In Stock</h3>
+            <span class="count" id="product-in-stock-count">15</span>
+        </div>
+    
+        <div class="products-status out-of-stock">
+            <h3>Out of Stock</h3>
+            <span class="count" id="product-out-of-stock-count">5</span>
+        </div>
+    
+        <div class="products-status live-products">
+            <h3>Live Products</h3>
+            <span class="count" id="product-live-count">18</span>
+        </div>
+    
+        <div class="products-status low-stock">
+            <h3>Low Stocks</h3>
+            <span class="count" id="product-low-stock-count">3</span>
+        </div>
+    
+        <div class="products-status inventory-value">
+            <h3>Inventory Value</h3>
+            <span class="count" id="inventory-value-count">₱50,000</span>
+        </div>
+    </div>
+    
+</div>
+</div>
+<hr>
+<div class="monthlySales">
+    <div class="monthlySales-container">
+        <div class="monthlySales-header">
+            <img src="{% static 'assets/images/icons/calendar.png' %}" alt="View Icon">
+            <h2>Sales this month</h2>
+        </div>
+        <hr>
+    </div>
+    <div class="monthlySalesChart">
+        <canvas id="monthlySalesChart" width="800" height="400"></canvas> <!-- Ensure proper dimensions for better visualization -->
+    </div>
+</div>
+
+<hr>
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <div class="logo">
+                      <img src="{% static 'assets/images/logo/Logo3.png' %}" alt="hexashop ecommerce templatemo">
+                  </div>
+                  <ul class="contact-info">
+                      <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
+                      <li><a href="mailto:hexashop@company.com">hexashop@company.com</a></li>
+                      <li><a href="tel:0100200340">010-020-0340</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Shopping & Categories</h4>
+                  <ul class="footer-links">
+                      <li><a href="#">Men’s Shopping</a></li>
+                      <li><a href="#">Women’s Shopping</a></li>
+                      <li><a href="#">Kids' Shopping</a></li> <!-- Corrected "Kid's" to "Kids'" -->
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Useful Links</h4>
+                  <ul class="footer-links">
+                      <li><a href="#">Homepage</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Help</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Help & Information</h4>
+                  <ul class="footer-links">
+                      <li><a href="#">Help</a></li>
+                      <li><a href="#">FAQ's</a></li>
+                      <li><a href="#">Shipping</a></li>
+                      <li><a href="#">Tracking ID</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="under-footer">
+                  <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.</p>
+                  <p>Design: <a href="https://templatemo.com" target="_blank" rel="noopener noreferrer">TemplateMo</a></p>
+                  <ul class="social-links">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+</body>
+</html>

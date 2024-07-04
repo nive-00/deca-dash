@@ -19,7 +19,7 @@
             <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
         </div>
         <div class="icons">
-            <a href="customer/cart_page.html"><img class='cart-icon' src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
+            <a href="{% url 'userauths:cart-page' %}"><img class='cart-icon' src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
             <a href="login.html"><img src="{% static 'assets/images/icons/profile.png' %}" alt="Profile"></a>
         </div>
         <div class="menu-container">

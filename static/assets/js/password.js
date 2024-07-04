@@ -18,14 +18,15 @@ function validatePassword() {
     const message = document.getElementById('passwordStrengthMessage');
 
     const lengthCheck = password.length >= 8;
+    const uppercaseCheck = /[A-Z]/.test(password);
     const numberOrSpecialCharCheck = /\d|[!@#$%^&*]/.test(password);
 
-    if (lengthCheck && numberOrSpecialCharCheck) {
-        message.innerHTML = '<i class="fas fa-check"></i> &#10004 Strong password.';
+    if (lengthCheck && uppercaseCheck && numberOrSpecialCharCheck) {
+        message.innerHTML = '<i class="fas fa-check"></i> &#10004; Valid Password.';
         message.className = "matched";
         return true;
     } else {
-        message.innerHTML = '<i class="fas fa-times"></i> &#10006; Password must be at least 8 characters long and contain at least one number or special character.';
+        message.innerHTML = '<i class="fas fa-times"></i> &#10006; Password must be at least 8 characters long, contain at least one uppercase letter, and at least one number or special character.';
         message.className = "invalid-password";
         return false;
     }

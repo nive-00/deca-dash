@@ -1,0 +1,253 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecaDash</title>
+    <link rel="icon" href="assets/images/logo/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/shop.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/shopfinalreg.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.css">
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</head>
+<body>
+    <div class="navibar">
+        <div class="logo">
+            <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+        </div>
+        <div class="icons">
+             <a href="customer/cart_page.html"><img class="cart-icon" src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
+            <a href="#"><img src="{% static 'assets/images/icons/profile.png' %}" alt="Profile"></a>
+        </div>
+        <div class="menu-container">
+          <div class="menu-toggle" onclick="toggleMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <div class="menu-content">
+            <div class="menu-toggle" onclick="toggleMenu()">
+              </div>
+              <div class="close-menu" onclick="toggleMenu()">&#x2715;</div> <!-- Close button -->
+              <div class="logo">
+                  <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
+              </div>
+              <hr class="logo-line">
+              <ul>
+                  <li><a href="">Account</a></li>
+                  <li><a href="">Cart</a></li>
+                  <div class="dropdown">
+                  <li><a href="">Categories</a>
+                    <ul class="categories-sub">
+                        <li><a href="">Desserts</a></li>
+                        <li><a href="">Dishes</a></li>
+                        <li><a href="">Pastries</a></li>
+                        <li><a href="">Raw Products</a></li>
+                        <li><a href="">Vegetables And Fruits</a></li>
+                        <li><a href="">Snacks</a></li>
+                    </ul>
+                    </li>
+                    <hr>
+                  <li><a href="">Support</a></li>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Be a Seller</a></li>
+              </ul>
+          </div>
+      </div>
+    </div>
+    <hr>  
+<div class="greetings">
+<hr>
+  <h1>We're getting there.</h1>
+  <p>Please fill up to complete your shop setup.</p> <br><br>
+  </div>
+<div class="logregContainer">
+<h3 style="color: gray;">Shop Contact Info</h3>
+  <form action="{% url 'userauths:seller-dashboard' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="shopName">Shop phone number:</label>
+    <input type="tel" id="phone" name="phone" pattern="^\09\d{9}$" placeholder="Phone (e.g 09-)" required>  
+    <label for="email">Shop email address:</label>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <label for="social">Shop social media (Optional):</label>
+    <input type="url" id="social" name="social" placeholder="Facebook link" >
+    <input type="url" id="social" name="social" placeholder="Instagram link" >
+    <input type="url" id="social" name="social" placeholder="Webpage link" >
+
+
+    <div class="form-group">
+      <label for="address">Shop full address:</label>
+      <textarea id="address" name="address" placeholder="Where is your shop located? Please input the full address."></textarea>
+    </div><hr>
+
+
+    <div class="form-container">
+        <h3 style="color: gray;">Shop Open Hours</h3>
+        <p>Note: Check the box if your shop is closed on that day. </p>
+
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="monday">Monday:</label>
+            <input type="text" id="monday_start" name="monday_start" class="time-input" placeholder="Open time" readonly>
+            <input type="text" id="monday_end" name="monday_end" class="time-input" placeholder="Close time" readonly>
+            <input type="checkbox" id="monday_closed" name="monday_closed" class="closed-checkbox">
+            <label for="monday_closed">Closed</label>
+          </div>
+      
+          <div class="form-group">
+            <label for="tuesday">Tuesday:</label>
+            <input type="text" id="tuesday_start" name="tuesday_start" class="time-input" placeholder="Open time" readonly>
+            <input type="text" id="tuesday_end" name="tuesday_end" class="time-input" placeholder="Close time" readonly>
+            <input type="checkbox" id="tuesday_closed" name="tuesday_closed" class="closed-checkbox">
+            <label for="tuesday_closed">Closed</label>
+          </div>
+      
+          <div class="form-group">
+            <label for="wednesday">Wednesday:</label>
+            <input type="text" id="wednesday_start" name="wednesday_start" class="time-input" placeholder="Open time" readonly>
+            <input type="text" id="wednesday_end" name="wednesday_end" class="time-input" placeholder="Close time" readonly>
+            <input type="checkbox" id="wednesday_closed" name="wednesday_closed" class="closed-checkbox">
+            <label for="wednesday_closed">Closed</label>
+          </div>
+      
+          <div class="form-group">
+            <label for="thursday">Thursday:</label>
+            <input type="text" id="thursday_start" name="thursday_start" class="time-input" placeholder="Open time" readonly>
+            <input type="text" id="thursday_end" name="thursday_end" class="time-input" placeholder="Close time" readonly>
+            <input type="checkbox" id="thursday_closed" name="thursday_closed" class="closed-checkbox">
+            <label for="thursday_closed">Closed</label>
+          </div>
+      
+          <div class="form-group">
+            <label for="friday">Friday:</label>
+            <input type="text" id="friday_start" name="friday_start" class="time-input" placeholder="Open time" readonly>
+            <input type="text" id="friday_end" name="friday_end" class="time-input" placeholder="Close time" readonly>
+            <input type="checkbox" id="friday_closed" name="friday_closed" class="closed-checkbox">
+            <label for="friday_closed">Closed</label>
+          </div>
+      
+          <div class="form-group">
+            <label for="saturday">Saturday:</label>
+            <input type="text" id="saturday_start" name="saturday_start" class="time-input" placeholder="Open time" readonly>
+            <input type="text" id="saturday_end" name="saturday_end" class="time-input" placeholder="Close time" readonly>
+            <input type="checkbox" id="saturday_closed" name="saturday_closed" class="closed-checkbox">
+            <label for="saturday_closed">Closed</label>
+          </div>
+      
+          <div class="form-group">
+            <label for="sunday">Sunday:</label>
+            <input type="text" id="sunday_start" name="sunday_start" class="time-input" placeholder="Open time" readonly>
+            <input type="text" id="sunday_end" name="sunday_end" class="time-input" placeholder="Close time" readonly>
+            <input type="checkbox" id="sunday_closed" name="sunday_closed" class="closed-checkbox">
+            <label for="sunday_closed">Closed</label>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Include jQuery and ClockPicker JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.js"></script>
+      
+      <script>
+        $(document).ready(function(){
+          $('.time-input').clockpicker({
+            autoclose: true,
+            twelvehour: true 
+          });
+      
+          // Handle checkbox for indicating closed days
+          $('.closed-checkbox').change(function() {
+            var isChecked = $(this).is(':checked');
+            var inputs = $(this).closest('.form-group').find('.time-input');
+            
+            if (isChecked) {
+              inputs.prop('disabled', true).val('');
+            } else {
+              inputs.prop('disabled', false);
+            }
+          });
+        });
+      </script>
+  <hr>
+
+
+    <div class="form-group">
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">I agree to the <a href="terms.html" target="_blank">terms and conditions</a>.</label>    
+    <a href="{% url 'userauths:seller-dashboard' %}"><input  type="submit" value="Finish" onclick="onSubmit(event)">
+    </div>
+    
+</div>
+<hr>
+
+  </form>
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <div class="logo">
+                      <img src="{% static 'assets/images/logo/Logo3.png' %}" alt="DecaDash">
+                  </div>
+                  <ul class="contact-info">
+                      <li><a href="#">DecaDash Community Angeles City Pampanga</a></li>
+                      <li><a href="mailto:hexashop@company.com">xxxDecadash.com</a></li>
+                      <li><a href="tel:09XXXXXXXX">09X-XXX-XXXX</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Categories</h4>
+                  <ul class="footer-links">
+                    <li><a href="">Desserts</a></li>
+                    <li><a href="">Dishes</a></li>
+                    <li><a href="">Pastries</a></li>
+                    <li><a href="">Raw Products</a></li>
+                    <li><a href="">Vegetables And Fruits</a></li>
+                    <li><a href="">Snacks</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Useful Links</h4>
+                  <ul class="footer-links">
+                      <li><a href="#">Homepage</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="footer-item">
+                  <h4>Help & Information</h4>
+                  <ul class="footer-links">
+                      <li><a href="#">lorem ipsum</a></li>
+                      <li><a href="#">lorem ipsum</a></li>
+                      <li><a href="#">lorem ipsum</a></li>
+                      <li><a href="#">lorem ipsum</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="under-footer">
+                <p>decadash.ltd © all rights reserved ® 2024</p>
+                  <ul class="social-links">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer></body>
+</html>

@@ -36,7 +36,7 @@
   color: #555; /* Color for status text */
 }
 /* Additional styles for shop info */
-.shop-info {
+.shop-info-cb {
   display: flex;
   align-items: center;
 }

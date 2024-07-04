@@ -8,19 +8,18 @@
     <link rel="icon" href="{% static 'assets/images/logo/logo1.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/shop.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="{% static 'assets/js/script.js' %}"></script>
     <script src="{% static 'assets/js/password.js' %}"></script>
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script></head>
+</head>
 <body>
     <div class="navibar">
         <div class="logo">
             <img src="{% static 'assets/images/logo/Logo4.png' %}" alt="Logo">
         </div>
         <div class="icons">
-                        <a href="customer/cart_page.html"><img class="cart-icon" src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
-
+             <a href="customer/cart_page.html"><img class="cart-icon" src="{% static 'assets/images/icons/cart.png' %}" alt="Cart"></a>
             <a href="#"><img src="{% static 'assets/images/icons/profile.png' %}" alt="Profile"></a>
         </div>
         <div class="menu-container">
@@ -62,57 +61,95 @@
     <hr>  
 <div class="greetings">
 <hr>
-  <h1>Welcome to DecaDash</h1>
-  <p>Start growing your business with us today. </p> <br><br>
+  <h1>Finally, getting there.</h1>
+  <p>Please fill up to complete your profile.</p> <br><br>
   </div>
-
 <div class="logregContainer">
-    <h3 style="color: gray;">Seller Details</h3>
-    <form action="{% url 'userauths:otp-verification2' %}" method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-      <!-- <label for="firstname"></label>
-      <input type="text" id="firstname" name="firstname" placeholder="First Name" required >
-  
-      <label for="lastname"></label>
-      <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
-  
-      <label for="email"></label>
-      <input type="email" id="email" name="email" placeholder="Email" required>
-  
-      <label for="phone"></label>
-      <input type="tel" id="phone" name="phone" pattern="^\09\d{9}$" placeholder="Phone Number" required>  
-      <hr>
-      <h3 style="color: gray;">Create a password</h3>
+  <form action="{% url 'userauths:home' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
 
-        <div class="createpass">
-            <div style="position: relative;">
-            <input type="password" id="createPassword" name="createpassword" placeholder="Create a password" oninput="validatePassword(); checkPasswordMatch()">
-            <img src="{% static './assets/images/icons/view.png' %}" class="toggle-password" id="toggleCreatePassword" onclick="togglePasswordVisibility('createPassword', 'toggleCreatePassword');" alt="Toggle password visibility">
-        </div>
-        <div id="passwordStrengthMessage" class="form-group"></div>
-        
-        <div style="position: relative;">
-          <input type="password" id="confirmPassword" name="confirmpassword" placeholder="Confirm your password"  oninput="checkPasswordMatch()">
-          <img src="{% static './assets/images/icons/view.png' %}" class="toggle-password" id="toggleConfirmPassword" onclick="togglePasswordVisibility('confirmPassword', 'toggleConfirmPassword');" alt="Toggle password visibility">
-        </div>
-        <div id="passwordMatchMessage" class="form-group"></div>
+      <div class="shop-profile-pic" style="background-image: url(/assets/images/icons/profile.png);">
       </div>
 
-     -->
 
-        <div class="termsandcond">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">I agree to the <a href="terms.html" target="_blank">terms and conditions</a>.</label><br><br>
-        </div>
-      <div class="g-recaptcha" data-sitekey="6LfbPMopAAAAAPw1VGzQBqpKKvxXej97EY96km43"></div>
-    <!--h-ref is sample only here--><a href="{% url 'userauths:otp-verification2' %}">
-    <input type="submit" value="Register" onclick="onSubmit(event)">
-    </form>
-    <p>Already have an account? <a href="login.html">Please login to continue.</a></p>
+      <label for="profilePic">Profile Picture:</label>
+      <input type="file" id="profilePic" name="profilePic" required>
+    </div>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" placeholder="18 above only" required>
+    <div class="form-group">
+      <label for="address">Complete address at DecaClark:</label>
+      <textarea id="address" name="address"></textarea>
+      <label for="yearAdd">Living in DecaClark since: </label>
+      <input type="text" id="yearAdd" name="yearAdd" pattern="[0-9]{4}" placeholder="YYYY" required>
+    </div>
+
+
+    <p>Please select your preferences by checking the boxes below:</p>
+    <label for="selectAll">
+      <input type="checkbox" id="selectAll" name="categories[]" value="selectAll">
+      Select All 
+  </label>
+    <div class="form-group-categories">
+      <div class="column">
+          <label for="ulam">
+              <input type="checkbox" id="ulam" name="categories[]" value="Ulam">
+              Ulam (Main Dishes)
+          </label>
+          <label for="desserts">
+              <input type="checkbox" id="desserts" name="categories[]" value="Desserts">
+              Desserts
+          </label>
+          <label for="rawProducts">
+              <input type="checkbox" id="rawProducts" name="categories[]" value="Raw Products">
+              Raw Products
+          </label>
+          <label for="breadPastries">
+              <input type="checkbox" id="breadPastries" name="categories[]" value="Bread and Pastries">
+              Bread and Pastries
+          </label>
+      </div>
+      <div class="column">
+          <label for="vegetablesFruits">
+              <input type="checkbox" id="vegetablesFruits" name="categories[]" value="Vegetables and Fruits">
+              Vegetables and Fruits
+          </label>
+          <label for="snacks">
+              <input type="checkbox" id="snacks" name="categories[]" value="Snacks">
+              Snacks
+          </label>
+          <label for="fastFood">
+              <input type="checkbox" id="fastFood" name="categories[]" value="Fast Food">
+              Fast Food
+          </label>
+          <label for="streetFoods">
+              <input type="checkbox" id="streetFoods" name="categories[]" value="Street Foods">
+              Street Foods
+          </label>
+      </div>
+  </div>
+  <h3 style="color: gray;">Create a password</h3>
+  <div class="createpass">
+    <div style="position: relative;">
+      <input type="password" id="createPassword" name="createpassword" placeholder="Create a password" oninput="validatePassword(); checkPasswordMatch()">
+      <img src="{% static './assets/images/icons/view.png' %}"class="toggle-password"  id="toggleCreatePassword" onclick="togglePasswordVisibility('createPassword', 'toggleCreatePassword');" alt="Toggle password visibility">
+    </div>
+    <div id="passwordStrengthMessage" class="form-group"></div>
+    <div style="position: relative;">
+      <input type="password" id="confirmPassword" name="confirmpassword" placeholder="Confirm your password"  oninput="checkPasswordMatch()">
+      <img src="{% static './assets/images/icons/view.png' %}" class="toggle-password" id="toggleConfirmPassword" onclick="togglePasswordVisibility('confirmPassword', 'toggleConfirmPassword');" alt="Toggle password visibility">
+    </div>
+    <div id="passwordMatchMessage" class="form-group"></div>
+  </div>
+  
+
+    <!--h-ref is sample only here--><a href="{% url 'userauths:home' %}"><input type="submit" value="Register" onclick="onSubmit(event)">
+    </div>
 </div>
+<hr>
 
-
+  </form>
 <footer>
   <div class="container">
       <div class="row">
@@ -177,6 +214,5 @@
           </div>
       </div>
   </div>
-</footer>
-</body>
+</footer></body>
 </html>

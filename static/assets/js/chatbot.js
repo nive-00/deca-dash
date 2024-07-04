@@ -14,7 +14,7 @@ function closeChat() {
 
 function addAutomatedMessages() {
   const messages = [
-    "Hello! Welcome to Kusing Karinderya.",
+    "Hello! Welcome to Chong's Chicken Inasal",
     "How can we help you today?"
   ];
   const chatMessages = document.getElementById("chat-messages");

@@ -67,7 +67,7 @@
 
     <div class="logregContainer">
         <h3 style="color: gray;">Customer Details</h3>
-        <form action="otp-verification.html" method="POST">
+        <form action="{% url 'userauths:otp-verification' %}" method="POST">
             {% csrf_token %}
             {{form.as_p}}
 

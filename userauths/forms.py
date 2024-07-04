@@ -8,3 +8,4 @@ class UserRegisterForm(UserCreationForm):
         fields = ['email','username']
 
 #,'phone_number','firstname','lastname'
+

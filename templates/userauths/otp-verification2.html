@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="{% static 'assets/js/script.js' %}"></script>
-    <script src="{% static 'assets/js/password.js' %}"></script>
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script></head>
+</head>
 <body>
     <div class="navibar">
         <div class="logo">
@@ -59,59 +57,34 @@
           </div>
       </div>
     </div>
-    <hr>  
 <div class="greetings">
-<hr>
-  <h1>Welcome to DecaDash</h1>
-  <p>Start growing your business with us today. </p> <br><br>
-  </div>
-
-<div class="logregContainer">
-    <h3 style="color: gray;">Seller Details</h3>
-    <form action="{% url 'userauths:otp-verification2' %}" method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-      <!-- <label for="firstname"></label>
-      <input type="text" id="firstname" name="firstname" placeholder="First Name" required >
-  
-      <label for="lastname"></label>
-      <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
-  
-      <label for="email"></label>
-      <input type="email" id="email" name="email" placeholder="Email" required>
-  
-      <label for="phone"></label>
-      <input type="tel" id="phone" name="phone" pattern="^\09\d{9}$" placeholder="Phone Number" required>  
-      <hr>
-      <h3 style="color: gray;">Create a password</h3>
-
-        <div class="createpass">
-            <div style="position: relative;">
-            <input type="password" id="createPassword" name="createpassword" placeholder="Create a password" oninput="validatePassword(); checkPasswordMatch()">
-            <img src="{% static './assets/images/icons/view.png' %}" class="toggle-password" id="toggleCreatePassword" onclick="togglePasswordVisibility('createPassword', 'toggleCreatePassword');" alt="Toggle password visibility">
-        </div>
-        <div id="passwordStrengthMessage" class="form-group"></div>
-        
-        <div style="position: relative;">
-          <input type="password" id="confirmPassword" name="confirmpassword" placeholder="Confirm your password"  oninput="checkPasswordMatch()">
-          <img src="{% static './assets/images/icons/view.png' %}" class="toggle-password" id="toggleConfirmPassword" onclick="togglePasswordVisibility('confirmPassword', 'toggleConfirmPassword');" alt="Toggle password visibility">
-        </div>
-        <div id="passwordMatchMessage" class="form-group"></div>
-      </div>
-
-     -->
-
-        <div class="termsandcond">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">I agree to the <a href="terms.html" target="_blank">terms and conditions</a>.</label><br><br>
-        </div>
-      <div class="g-recaptcha" data-sitekey="6LfbPMopAAAAAPw1VGzQBqpKKvxXej97EY96km43"></div>
-    <!--h-ref is sample only here--><a href="{% url 'userauths:otp-verification2' %}">
-    <input type="submit" value="Register" onclick="onSubmit(event)">
-    </form>
-    <p>Already have an account? <a href="login.html">Please login to continue.</a></p>
+<h1>You're halfway there</h1>
+<p>We just need to verify it</p>
+<hr>  
 </div>
+<div class="logregContainer">
+    <h1>OTP Verification</h1>
 
+    <div class="otp-text">
+      <p>An OTP has been sent to your phone number. Please enter the OTP to proceed.</p>
+    </div>
+
+    <input type="text" id="otp-input" placeholder="Enter OTP code" pattern="[0-9]*" maxlength="6" required>
+    <!--h-ref is sample only here--><a href="{% url 'userauths:shop-register' %}">
+    <input type="submit" value="Verify Otp">
+    </a>
+    <div class="change-number-link">
+      <p>Didn't receive OTP? <a href="#">Resend OTP</a></p>
+      <p>Want to change your email?? <a href="#" id="change-link">Click here</a></p>
+    </div>
+    <div id="change-number-container" style="display: none;">
+    <p>Current email is <span class="currentEmail">sampleEmail@gmail.com</span></p>
+      <input type="tel" id="new-phone" placeholder="Enter new Email" required>
+      <input type="submit" value="Update">
+    </div>
+  </div>
+<hr>
+<script src="{% static 'assets/js/script.js' %}"></script>
 
 <footer>
   <div class="container">
@@ -177,6 +150,5 @@
           </div>
       </div>
   </div>
-</footer>
-</body>
+</footer></body>
 </html>

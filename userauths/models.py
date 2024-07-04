@@ -15,13 +15,30 @@ from django.contrib.auth.models import AbstractUser
 
 #     def __str__(self):
 #         return self.username
-    
+
 class User(AbstractUser):
     email = models.EmailField(unique=True)
     username = models.CharField(max_length=100)
+    #phone_number = models.CharField(max_length=100)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = [username,email]
 
     def __str__(self):
         return self.username
+    
+# class Admin(AbstractUser):
+#     email = models.EmailField(unique=True)
+#     username = models.CharField(max_length=100)
+
+#     USERNAME_FIELD = 'email'
+#     REQUIRED_FIELDS = [username,email]
+
+#     def __str__(self):
+#         return self.username
+    
+# class Seller(AbstractUser):
+#     pass
+
+# class Customer(AbstractUser):
+#     pass

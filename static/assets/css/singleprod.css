@@ -132,16 +132,8 @@
     flex: 0 0 auto; /* Prevents it from growing or shrinking */
   }
   
-  .sentiment-piechart img {
-    max-width: 350px;
-    height: auto;
-    object-fit: cover;
-    margin: auto;
-  }
-  
   .sentimentSum {
     flex: 1; /* Allows this element to take up the remaining space */
-    border: 1px solid #ccc;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     height: 150px;
@@ -168,6 +160,12 @@
 
   }
   
+.stock p{
+  display: inline;
+  font-size: 14px;
+  color: #7e7e7e;
+}
+
   .sentimentGraph img {
     max-width: 200px;
     height: auto;

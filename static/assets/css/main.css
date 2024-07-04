@@ -19,7 +19,7 @@ body {
   z-index: 1000; 
 }
 .logo{
-  margin: auto; 
+  margin: auto;
   
 }
 .logo-line{
@@ -28,6 +28,7 @@ body {
 .logo img {
   height: 50px;
   margin: auto;
+
 }
 
 .icons a img {

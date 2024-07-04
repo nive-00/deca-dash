@@ -1,0 +1,172 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <div class="greetings">
+    <hr>
+    <h1>Hello there!</h1> 
+    <h2>What are you having today?</h2>
+    <br>
+    <p>There's always something for you.</p> 
+    </div>
+
+    <div class="categories-container">
+        <a href="categories/dishes_page.html" class="category">
+            <img src="{% static 'assets/images/categories/dish.png' %}" alt="Dishes">
+            <div class="overlay">
+                <h3>Dishes</h3>
+            </div>
+            <div class="title">
+                <h4>Dishes</h4>
+            </div>
+        </a>
+        <a href="#" class="category">
+            <img src="{% static 'assets/images/categories/Dessert.png' %}" alt="Desserts">
+            <div class="overlay">
+                <h3>Desserts</h3>
+            </div>
+            <div class="title">
+                <h4>Desserts</h4>
+            </div>
+        </a>
+        <a href="#" class="category">
+            <img src="{% static 'assets/images/categories/RawProduct.png' %}" alt="Raw Products">
+            <div class="overlay">
+                <h3>Raw Products</h3>
+            </div>
+            <div class="title">
+                <h4>Raw Products</h4>
+            </div>
+        </a>
+        <a href="#" class="category">
+            <img src="{% static 'assets/images/categories/Bread.png' %}" alt="Bread and Pastries">
+            <div class="overlay">
+                <h3>Bread and Pastries</h3>
+            </div>
+            <div class="title">
+                <h4>Bread and Pastries</h4>
+            </div>
+        </a>
+        <a href="#" class="category">
+            <img src="{% static 'assets/images/categories/Vegetable.png' %}" alt="Vegetables and Fruits">
+            <div class="overlay">
+                <h3>Vegetables and Fruits</h3>
+            </div>
+            <div class="title">
+                <h4>Vegetables and Fruits</h4>
+            </div>
+        </a>
+        <a href="#" class="category">
+            <img src="{% static 'assets/images/categories/Snacks.png' %}" alt="Snacks">
+            <div class="overlay">
+                <h3>Snacks</h3>
+            </div>
+            <div class="title">
+                <h4>Snacks</h4>
+            </div>
+        </a>
+        <a href="#" class="category">
+            <img src="{% static 'assets/images/categories/FastFood.png' %}" alt="Fast Food">
+            <div class="overlay">
+                <h3>Fast Food</h3>
+            </div>
+            <div class="title">
+                <h4>Fast Food</h4>
+            </div>
+        </a>
+        <a href="#" class="category">
+            <img src="{% static 'assets/images/categories/StreetFood.png' %}" alt="Street Foods">
+            <div class="overlay">
+                <h3>Street Foods</h3>
+            </div>
+            <div class="title">
+                <h4>Street Foods</h4>
+            </div>
+        </a>
+    </div>
+
+    <hr>
+    <div class="greetings">
+        <h1>Featured Shops</h1>
+        <p>Never miss out anything!</p> <br><br>
+        <hr>
+    </div>
+    <div class="Featured-shops">
+        <div class="shop-card">
+            <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 1" class="shop-image">
+            <div class="shop-info">
+                <div class="shop-name">Shop 1</div>
+                <div class="shop-ratings">
+                    <span class="stars" style="--rating: 4.5;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.5 |
+                    <a href="#reviews" class="reviews-a">450 reviews</a>
+                </div>
+                <div class="address">123 Main Street, Anytown, USA</div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+            <div class="shop-info">
+                <div class="shop-name">Shop 2</div>
+                <div class="shop-ratings">
+                    <span class="stars" style="--rating: 4.5;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.5 |
+                    <a href="#reviews" class="reviews-a">450 reviews</a>
+                  </div>
+                <div class="address">456 Oak Avenue, Somewhereville, USA</div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+            <div class="shop-info">
+                <div class="shop-name">Shop 2</div>
+                <div class="shop-ratings">
+                    <span class="stars" style="--rating: 4.5;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.5 |
+                    <a href="#reviews" class="reviews-a">450 reviews</a>
+                  </div>
+                <div class="address">789 Maple Street, Anytown, USA</div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+            <div class="shop-info">
+                <div class="shop-name">Shop 2</div>
+                <div class="shop-ratings">
+                    <span class="stars" style="--rating: 4.5;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.5 |
+                    <a href="#reviews" class="reviews-a">450 reviews</a>
+                  </div>
+                <div class="address">101 Pine Road, Somewhereville, USA</div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+            <div class="shop-info">
+                <div class="shop-name">Shop 2</div>
+                <div class="shop-ratings">
+                    <span class="stars" style="--rating: 4.5;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.5 |
+                    <a href="#reviews" class="reviews-a">450 reviews</a>
+                  </div>
+                <div class="address">202 Elm Street, Anytown, USA</div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <img src="{% static 'assets/images/categories/Dishes.png' %}" alt="Shop 2" class="shop-image">
+            <div class="shop-info">
+                <div class="shop-name">Shop 2</div>
+                <div class="shop-ratings">
+                    <span class="stars" style="--rating: 4.5;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.5 |
+                    <a href="#reviews" class="reviews-a">450 reviews</a>
+                  </div>
+                <div class="address">303 Oak Lane, Somewhereville, USA</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="greetings">
+        <h1>Deals just for you</h1>
+        <p>Products tailored for you.</p> <br><br>
+        <hr>
+    </div>
+
+</body>
+</html>
+{% endblock content %}
